@@ -5,3 +5,10 @@ eleventyNavigation:
   order: 2
 ---
 
+<ol>
+	{% for item in collections.posts %}
+	{% if page.url != item.url %}
+	<li><a href="{{ item.url }}">{{ item.url }}</a></li>
+	{% endif %}
+	{% endfor %}
+</ol>
