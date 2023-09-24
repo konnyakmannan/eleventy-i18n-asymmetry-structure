@@ -1,3 +1,15 @@
+<nav>
+	<ul>
+		{%- for item in collections.all | locale_pages %}
+		<li>
+			<a href="{{ item.url }}">
+				{{ item.url }}
+			</a>
+		</li>
+		{%- endfor %}
+	</ul>
+</nav>
+
 Site is also available in:
 {%- for link in "/" | locale_url | locale_links %}
 <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">

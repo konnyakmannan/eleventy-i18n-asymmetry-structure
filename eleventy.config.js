@@ -5,6 +5,17 @@ module.exports = function(eleventyConfig) {
 		defaultLanguage: "en",
 	});
 
+	eleventyConfig.addFilter('locale_pages', function(collection, lang=this.page.lang) {
+		let pageArray = [];
+		for(let item of collection) {
+			let itemLang = item.url.split('/')[1]
+			if(itemLang == lang) {
+				pageArray.push(item);
+			}
+		}
+		return pageArray;
+	});
+
 	return {
 	  dir: {
 			layouts: "_layouts"
