@@ -4,4 +4,10 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		defaultLanguage: "en",
 	});
+
+	return {
+	  dir: {
+			layouts: "_layouts"
+		}
+	};
 };

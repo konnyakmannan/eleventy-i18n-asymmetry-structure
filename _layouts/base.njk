@@ -1,0 +1,26 @@
+<!doctype html>
+
+<html lang="{{ page.lang }}">
+	<head>
+		<meta charset="utf-8">
+
+		<title>{{ title or metadata.title }}</title>
+		<meta name="description" content="{{ description or metadata.description }}">
+		<meta name="author" content="{{ metadata.author }}">
+
+		<link rel="stylesheet" href="">
+	</head>
+
+	<body>
+		<header>
+			{% include "header.njk" %}
+		</header>
+
+		<main>
+			{{ content | safe }}
+		</main>
+
+		<footer>
+		</footer>
+	</body>
+</html>
