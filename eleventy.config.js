@@ -1,6 +1,8 @@
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
+	eleventyConfig.ignores.add("README.md");
+
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		defaultLanguage: "en",
 	});
