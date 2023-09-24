@@ -1,9 +1,9 @@
 <nav>
 	<ul>
-		{%- for item in collections.all | locale_pages %}
+		{%- for item in collections.all | locale_pages | eleventyNavigation %}
 		<li>
 			<a href="{{ item.url }}">
-				{{ item.url }}
+				{{ item.key }}
 			</a>
 		</li>
 		{%- endfor %}
