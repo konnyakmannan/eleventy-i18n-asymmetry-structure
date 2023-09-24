@@ -4,7 +4,11 @@ layout: base.njk
 
 <h1>{{ title }}</h1>
 
-{{ page.date.toUTCString() }}
+<ul>
+	<li><time datetime="{{ page.date | htmlDateString }}">
+		{{ page.date | readableDate }}
+	</time></li>
+</ul>
 
 
 {{ content | safe }}
