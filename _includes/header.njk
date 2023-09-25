@@ -1,3 +1,7 @@
+<a href="{{ '/' | locale_url }}">
+	{{ metadata.title }}
+</a>
+
 <nav>
 	<ul>
 		{%- for item in collections.all | locale_pages | eleventyNavigation %}
