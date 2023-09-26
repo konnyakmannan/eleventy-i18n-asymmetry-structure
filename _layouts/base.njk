@@ -8,7 +8,8 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<meta name="author" content="{{ metadata.author }}">
 
-		<link rel="stylesheet" href="">
+		{%- css %}{% include "public/css/index.css" %}{% endcss %}
+		<style>{% getBundle "css" %}</style>
 	</head>
 
 	<body>
