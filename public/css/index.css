@@ -2,11 +2,34 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+}
+
 html {
 	& body {
 		padding: 0;
 		margin: 0 auto;
 		max-width: 38em;
+
+		font-family: var(--font-family);
 	}
 }
 
+main {
+	& h1 {
+		font-size: 2.8rem;
+	}
+	& h2 {
+		font-size: 2rem;
+	}
+	& h3 {
+		font-size: 1.4rem;
+	}
+	&:lang(ja) {
+		line-height: 1.8em;
+	}
+	&:lang(en) {
+		line-height: 1.5em;
+	}
+}
