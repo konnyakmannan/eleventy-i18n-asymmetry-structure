@@ -1,3 +1,4 @@
+const eleventyBundler = require("@11ty/eleventy-plugin-bundle");
 const eleventyNavigation = require("@11ty/eleventy-navigation");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
@@ -6,6 +7,7 @@ const { DateTime } = require("luxon");
 module.exports = function(eleventyConfig) {
 	eleventyConfig.ignores.add("README.md");
 
+	eleventyConfig.addPlugin(eleventyBundler);
 	eleventyConfig.addPlugin(eleventyNavigation);
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		defaultLanguage: "en",
