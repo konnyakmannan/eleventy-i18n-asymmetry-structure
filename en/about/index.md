@@ -6,4 +6,11 @@ eleventyNavigation:
   order: 3
 ---
 
-This is a sample i18n site with [Eleventy](https://www.11ty.dev).
+## About this site
+
+This is a sample site built with Eleventy.
+Through the use of plugins and filters, the site supports multiple languages.
+
+Eleventy is one of the static site generators,
+offering a simple yet powerful framework.
+
