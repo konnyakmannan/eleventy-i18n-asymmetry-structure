@@ -4,6 +4,9 @@
 
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
+
+	--background-color: #fef8f0;
+	--text-color: #333;
 }
 
 html {
@@ -13,6 +16,8 @@ html {
 		max-width: 38em;
 
 		font-family: var(--font-family);
+		color: var(--text-color);
+		background-color: var(--background-color);
 	}
 }
 
