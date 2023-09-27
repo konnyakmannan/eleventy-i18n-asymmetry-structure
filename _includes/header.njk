@@ -1,12 +1,14 @@
-<a href="{{ '/' | locale_url }}">
-	{{ metadata.title }}
-</a>
+<nav >
+<h1 class="home-link">
+	<a href="{{ '/' | locale_url }}">
+		{{ metadata.title }}
+	</a>
+</h1>
 
-<nav>
-	<ul>
+	<ul class="content-nav">
 		{%- for item in collections.all | locale_pages | eleventyNavigation %}
-		<li>
-			<a href="{{ item.url }}">
+		<li class="nav-item">
+			<a href="{{ item.url }}" {% if item.url == page.url %} aria-current="page"{% endif %}>
 				{{ item.key }}
 			</a>
 		</li>
@@ -14,7 +16,7 @@
 	</ul>
 </nav>
 
-<small>
+<small class="alternative-link">
 	Site is also available in:
 	{%- for link in "/" | locale_url | locale_links %}
 	<a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">
