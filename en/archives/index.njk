@@ -8,11 +8,13 @@ eleventyNavigation:
 <ol reverse class="post-list">
 	{% for item in collections.posts | reverse %}
 	{% if page.url != item.url %}
-	<li>
-		<time datetime="{{ page.date | htmlDateString }}">
+	<li class="post-list-item">
+		<time datetime="{{ page.date | htmlDateString }}" class="post-list-date">
 			{{ item.data.date | readableDate }}
 		</time>
-		<a href="{{ item.url }}">{{ item.data.title }}</a>
+		<a href="{{ item.url }}" class="post-list-link">
+			{{ item.data.title }}
+		</a>
 	</li>
 	{% endif %}
 	{% endfor %}
