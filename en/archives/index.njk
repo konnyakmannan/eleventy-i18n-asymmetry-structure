@@ -5,10 +5,15 @@ eleventyNavigation:
   order: 2
 ---
 
-<ol>
-	{% for item in collections.posts %}
+<ol reverse class="post-list">
+	{% for item in collections.posts | reverse %}
 	{% if page.url != item.url %}
-	<li><a href="{{ item.url }}">{{ item.url }}</a></li>
+	<li>
+		<time datetime="{{ page.date | htmlDateString }}">
+			{{ item.data.date | readableDate }}
+		</time>
+		<a href="{{ item.url }}">{{ item.data.title }}</a>
+	</li>
 	{% endif %}
 	{% endfor %}
 </ol>
