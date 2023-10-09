@@ -1,5 +1,5 @@
 module.exports = {
-	title: "Title",
-	description: "description.",
-	author: "Name"
+	title: "Web Site Title",
+	description: "Site Description.",
+	author: "Your Name"
 }
